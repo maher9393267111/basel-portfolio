@@ -11,9 +11,8 @@ const MainHero = () => {
   return (
     <div className="gap-y   mt-12 flex flex-wrap items-center justify-between gap-x-12 lg:-mt-1">
       <div className=" flex-1">
-        <h1 className=" relative text-2xl md:text-4xl  font-bold  font-kufi  mb-4 mt-3  md:max-w-[22ch] ">
-        باسل القصاب مؤسس منتدى المستثمرين العرب اداري وتنفيذي للعديد من مشاريع الاستثمارية بشراكات ناجحة مع المستثمرين ورجال اعمال لدي سلسلة شركات تجارية دولية 
-في تركيا واميركا والامارات
+        <h1 className=" relative text-2xl md:text-4xl  font-bold  font-kufi  mb-4 mt-3  md:max-w-[30ch] ">
+    {t("me")}
           <div className="absolute bottom-1/2 right-0 -z-10 h-28 w-28 translate-y-1/2 rounded-full bg-primary blur-[150px] md:blur-[110px]"></div>
         </h1>
 
