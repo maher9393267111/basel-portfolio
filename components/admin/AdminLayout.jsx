@@ -15,17 +15,10 @@ import { toast } from "react-toastify";
 const AdminLayout = ({ children }) => {
   const list = [
     { id: 1, text: "Admin Dashboard", path: "/admin" },
-    { id: 2, text: "Add Category", path: "/admin/category/add" },
-    { id: 3, text: "All Categories", path: "/admin/category/all" },
-    { id: 4, text: "Add Product", path: "/admin/product/add" },
-    { id: 5, text: "All Products", path: "/admin/product/all" },
-    { id: 6, text: "Add SubCategory", path: "/admin/subcategory/add" },
-    { id: 7, text: "All SubCategories", path: "/admin/subcategory/all" },
-    { id: 8, text: "Add Project", path: "/admin/project/add" },
-    { id: 9, text: "All Projects", path: "/admin/project/all" },
-    { id: 9, text: "Add Advertise", path: "/admin/advertise/add" },
-    { id: 10, text: "All Advertises", path: "/admin/advertise/all" },
-    { id: 11, text: "All Users", path: "/admin/users" },
+   
+    { id: 4, text: "Add Article", path: "/admin/product/add" },
+    { id: 5, text: "All Articles", path: "/admin/product/all" },
+
   ];
 
   const { logout, profile, setPageLoading, pageLoading, user } = useAuth();
