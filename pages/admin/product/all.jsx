@@ -15,7 +15,7 @@ export default AllProductsPage;
 
 // serverside
 AllProductsPage.getInitialProps = async (context) => {
-  const Products = await getDocuments("products"); //  []
+  const Products = await getDocuments("articles"); //  []
 
 
   console.log("productsData", Products);

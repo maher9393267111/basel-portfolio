@@ -36,46 +36,19 @@ const ProductTable = ({ products }) => {
       // same name from database   // category={title ,....}
       dataIndex: "title",
 
-      filters: [
-        {
-          text: "Used Laptops",
-          value: "Used Laptops",
-        },
-        {
-          text: "iphone 14",
-          value: "iphone 14",
-        },
-      ],
-      filteredValue: products.name || null,
-      onFilter: (value, record) => {
-        console.log("record", record, value);
-        record.desc.includes(value);
-      },
-      sorter: (a, b) => a.name.length - b.name.length,
-      sortOrder: sortedInfo.columnKey === "name" ? sortedInfo.order : null,
-      ellipsis: true,
     },
     {
-      title: "Category",
+      title: "English Title",
       // same name from database   // category={title ,....}
-      dataIndex: "category",
+      dataIndex: "title",
     },
     {
-      title: "SubCategory",
+      title: "Arabic Title",
       // same name from database   // category={title ,....}
-      dataIndex: "subcategory",
+      dataIndex: "titlear",
     },
     
-    {
-      title: "Is Offer",
-      // same name from database   // category={title ,....}
-      render: (record) => {
-        return (
-          <div>
-          {record.isoffer ? <h1 className=" text-green-500"> True</h1> : <h1 className=" text-red-500"> False</h1> }
-          </div>
-          )
-    }},
+
 
 
     {

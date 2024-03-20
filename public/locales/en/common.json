@@ -2,7 +2,76 @@
     "title": "Home",
     "home":"Home",
     "articles":"articles",
-    "me":"Basil Al-Qassab, founder of the Arab Investors Forum, is an administrator and executive of many investment projects with successful partnerships with investors and businessmen. I have a series of international commercial companies in Turkey, America and the Emirates."
+    "me":"Basil Al-Qassab, founder of the Arab Investors Forum, is an administrator and executive of many investment projects with successful partnerships with investors and businessmen. I have a series of international commercial companies in Turkey, America and the Emirates.",
+    "mecompanies":"My Companies",
+    "works":"My works",
+     
+  "companies": [
+    { 
+      
+      "title":"Arabian Investors",
+      "imgUrl":"companies/1.jpg",
+      "desc":"A Turkish company accredited to grant citizenship to Caribbean countries and provide all legal advice for businessmen and investors to facilitate their travel to the best countries in the world.",
+      "link":""
+      
+    },
+    {
+      
+      "title":"Darna",
+      "imgUrl":"companies/2.jpg",
+      "desc":"A leading Emirati company in real estate marketing with ten years of experience with a professional work team from the airport until receiving the property. We have a second branch in Istanbul implementing tourist cottage projects.",
+      "link":"https://www.instagram.com/darna.real.estate?igsh=MXVucTk4emNkMnoxNA=="
+     
+     }
+     ,
+     {
+       
+        "title":"Hiba Butik",
+        "imgUrl":"companies/3.jpg",
+       "desc":"An officially licensed American company, a leader in the retail sector for selling women's clothing through electronic stores. We offer a variety of dresses, sets and galabiyas designed with the latest fashion trends. We strive to meet the needs of modern women and enable them to express their elegance and personal confidence through distinctive, high-quality clothing."
+       ,
+       "link":"https://www.hbshoping.com"
+      
+      }
+    
+   
+      
+  ]
+  
+
+,
+  "myworks": [
+    { 
+      
+      "title":"Arabian Investors",
+      "imgUrl":"companies/1.jpg",
+      "desc":"A Turkish company accredited to grant citizenship to Caribbean countries and provide all legal advice for businessmen and investors to facilitate their travel to the best countries in the world.",
+      "link":""
+      
+    },
+    {
+      
+      "title":"Darna",
+      "imgUrl":"companies/2.jpg",
+      "desc":"A leading Emirati company in real estate marketing with ten years of experience with a professional work team from the airport until receiving the property. We have a second branch in Istanbul implementing tourist cottage projects.",
+      "link":"https://www.instagram.com/darna.real.estate?igsh=MXVucTk4emNkMnoxNA=="
+     
+     }
+     ,
+     {
+       
+        "title":"Hiba Butik",
+        "imgUrl":"companies/3.jpg",
+       "desc":"An officially licensed American company, a leader in the retail sector for selling women's clothing through electronic stores. We offer a variety of dresses, sets and galabiyas designed with the latest fashion trends. We strive to meet the needs of modern women and enable them to express their elegance and personal confidence through distinctive, high-quality clothing."
+       ,
+       "link":"https://www.hbshoping.com"
+      
+      }
+    
+   
+      
+  ]
+
     
   
     }

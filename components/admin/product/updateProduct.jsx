@@ -12,7 +12,7 @@ import AdminLayout from "../AdminLayout";
 
 
 import { uploadImages, deleteImages } from "@/functions/firebase/getData";
-const UpdateProductMain = ({ product, cats, subcats }) => {
+const UpdateProductMain = ({ product }) => {
   const { query, replace } = useRouter();
   const { id } = query;
   //const [product, setProduct] = useState(null);
@@ -41,7 +41,7 @@ const UpdateProductMain = ({ product, cats, subcats }) => {
       await deleteImages(imagesToDelete);
       const newImagesUploaded = await uploadImages(files);
       values.images = [...values.images, ...newImagesUploaded];
-      await updateDoc(doc(db, "products", id), values);
+      await updateDoc(doc(db, "articles", id), values);
 
 
       message.success("Product Updated Successfully");
@@ -59,8 +59,7 @@ const UpdateProductMain = ({ product, cats, subcats }) => {
       <ProductForm
         {...{
           initialValues,
-          cats,
-          subcats,
+         
           files,
           setFiles,
           isupdate,

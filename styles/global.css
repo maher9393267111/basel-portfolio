@@ -37,10 +37,30 @@ body {
 
 @font-face {
   font-family: DroidSansMono;
-  src: url("../public/Header.ttf");
+  src: url("../public/font3/font3.otf");
+}
+
+
+@layer base {
+  * {
+    @apply select-none;
+    /* font-family: "DroidSansMono", sans-serif; */
+  }
+
 }
 
 
 .menu-icon {
   fill: white;
+}
+
+
+
+.brands_slider .swiper-wrapper {
+  -webkit-transition-timing-function: linear !important;
+  transition-timing-function: linear !important;
+}
+
+.slider_title {
+  text-shadow: 3px 3px 2px #ffffff !important;
 }

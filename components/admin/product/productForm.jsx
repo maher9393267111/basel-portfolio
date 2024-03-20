@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
 import {
   getDocuments,
   antdFieldValidation,
-} from "@/functions/firebase/getData";
+} from "../../../functions/firebase/getData";
 import {
   Button,
   Form,
@@ -12,34 +12,55 @@ import {
   Select,
   Switch,
   InputNumber,
+  Checkbox,
 } from "antd";
 const { TextArea } = Input;
 
 import Image from "next/image";
 
-const ProductForm = ({
+import "react-quill/dist/quill.snow.css";
+import dynamic from "next/dynamic";
+
+const modules = {
+  toolbar: [
+    [{ header: "1" }, { header: "2" }, { font: [] }],
+    [{ size: [] }],
+    ["bold", "italic", "underline", "strike", "blockquote"],
+    [{ direction: "rtl" }],
+    [
+      { list: "ordered" },
+      { list: "bullet" },
+      { indent: "-1" },
+      { indent: "+1" },
+    ],
+    ["link", "image", "video"],
+    ["clean"],
+  ],
+};
+
+const RecipeForm = ({
   onFinish,
   initialValues,
   files,
   setFiles,
-  cats,
-  subcats,
+  
   isupdate = false,
   videoFile,
   setVideoFile,
 }) => {
   const [images, setImages] = useState(initialValues?.images || []);
-  const [video, setVideo] = useState(initialValues?.video || "");
-  const [offerToggle, setOfferToggle] = useState(initialValues?.isoffer ||false);
 
 
-  const onChange = (checked) => {
-    setOfferToggle(checked);
-    
-};
+
+
+
+  const ReactQuill = useMemo(
+    () => dynamic(() => import("react-quill"), { ssr: false }),
+    []
+  );
 
   return (
-    <div className=" w-[80%] mx-auto ">
+    <div className=" w-[80%] mx-auto mt-24 ">
       <div className=" w-full md:w-[70%] border-2 py-6 px-6">
         <Form
           layout="vertical"
@@ -47,109 +68,99 @@ const ProductForm = ({
           onFinish={(values) =>
             // name of our function
             onFinish({
+             
               ...values,
               images,
-              video,
+              
             })
           }
           initialValues={{
             title: initialValues?.title || "",
-            category: initialValues?.category || "",
-            subcategory: initialValues?.subcategory || "",
-            price: initialValues?.price || 0,
+            titlear: initialValues?.titlear || "",
+           
             desc: initialValues?.desc || "",
-            instock: initialValues?.instock || true,
-            images: initialValues?.images || [],
-            video: initialValues?.video || "",
-            isoffer: initialValues?.isoffer || false,
-            discount: initialValues?.discount || 0,
-            offerdesc: initialValues?.offerdesc || "",
-
+            descar: initialValues?.descar || "",
+           
+        
           }}
         >
-          <Form.Item name="title" label="Add Product - Title">
-            <Input />
+          
+
+          <Form.Item
+            rules={[
+              {
+                required: true,
+                message: "Please input your title",
+              },
+            ]}
+            name="title"
+            label="Title english"
+          >
+            <Input className="py-2" />
           </Form.Item>
 
-          <Form.Item name="desc" label="Description">
-            <TextArea rows={4} />
+          <Form.Item
+            rules={[
+              {
+                required: true,
+                message: "Please input your title",
+              },
+            ]}
+            name="titlear"
+            label="Title arabic"
+          >
+            <Input className="py-2" />
           </Form.Item>
+
+         
 
           <div className=" grid gap-3 md:grid-cols-3 lg:grid-cols-4 grid-cols-1">
-            {/* -----category--- */}
-            <Form.Item name="category" label="category">
-              <Select placeholder="Select Category">
-                {cats?.map((category) => {
-                  return (
-                    <Select.Option key={category?.id} value={category?.title}>
-                      {category?.title}
-                    </Select.Option>
-                  );
-                })}
-              </Select>
-            </Form.Item>
-
-            {/* -----subcategory--- */}
-            <Form.Item name="subcategory" label="subcategory">
-              <Select placeholder="Select SubCategory">
-                {subcats?.map((subcat) => {
-                  return (
-                    <Select.Option key={subcat?.id} value={subcat?.title}>
-                      {subcat?.title}
-                    </Select.Option>
-                  );
-                })}
-              </Select>
-            </Form.Item>
-
-            <div className=" flex  md:col-span-2 gap-2 items-center justify-center md:justify-start">
-              {/* ----Price--- */}
-
-              <Form.Item name="price" label="Price">
-                <InputNumber min={0} />
-              </Form.Item>
-
-              {/* ----InStock----- */}
-
-              <Form.Item name="instock" label="InStock">
-                <Switch
-                  // checked="true"
-                  defaultChecked
-                  className=" bg-red-400 "
-                />
-              </Form.Item>
-
-                            {/* ----isoffer----- */}
-
-                            <Form.Item name="isoffer" label="IsOffer">
-                <Switch 
-                  checked={offerToggle}
-                  // defaultChecked
-                  className=" bg-red-400 "
-                  onChange={onChange}
-                />
-              </Form.Item>
-
-
-            </div>
+            <div className=" flex  md:col-span-2 gap-2 items-center justify-center md:justify-start"></div>
           </div>
-                {offerToggle ? 
 
-                <div className="flex-col flex md:flex-row md:gap-12 ">
-                          {/* ----offerDesciption--- */}
+          
+            <div>
+              <Form.Item
+                label="Description"
+                name="desc"
+                rules={[
+                  {
+                    required: true,
+                    message: "Please input your description!",
+                  },
+                ]}
+              >
+                {/* <textarea rows={5}></textarea> */}
 
-                <Form.Item  className="md:w-[70%]" name="offerdesc" label="OfferDesc">
-                <TextArea rows={2} />
-                </Form.Item>
-
-                              {/* ----Discount--- */}
-
-              <Form.Item name="discount" label="Discount">
-                <InputNumber min={0} />
+                <ReactQuill
+                  modules={modules}
+                  theme="snow"
+                  className=" pb-[10px] border-[2.5px] text-black font-medium rounded-md border-teal-400 hover:border-blue-600"
+                />
               </Form.Item>
 
-                </div>
-                 : null } 
+              <Form.Item
+                label="Description arabic"
+                name="descar"
+                rules={[
+                  {
+                    required: true,
+                    message: "Please input your description!",
+                  },
+                ]}
+              >
+                {/* <textarea rows={5}></textarea> */}
+
+                <ReactQuill
+                  modules={modules}
+                  theme="snow"
+                  className=" ql-editor-rt pb-[10px] border-[2.5px] text-black font-medium rounded-md border-teal-400 hover:border-blue-600"
+                />
+              </Form.Item>
+
+              
+            </div>
+         
 
           {/* -----images upload----- */}
 
@@ -175,7 +186,7 @@ const ProductForm = ({
                 console.log("files", files);
               }}
             >
-              Upload Images {files?.length}
+              Upload Images
             </Upload>
           </div>
 
@@ -205,47 +216,11 @@ const ProductForm = ({
             ))}
           </div>
 
-          {/* -----Video upload----- */}
+   
 
-          <div>
-            <Upload
-              accept="video/*"
-              maxCount={1}
-              // file is data of image will be uploaded to firebase/storage
-              beforeUpload={(file) => {
-                setVideoFile(file);
-                // setFiles((prev) => [...prev, file]);
-                return false;
-              }}
-              listType="picture-card"
-              onRemove={() => setVideoFile("")}
-            >
-              Upload Video
-            </Upload>
-          </div>
+      
 
-          {/* -----Video delete----- */}
-
-          <div className="flex flex-wrap gap-3 mt-2 ">
-            {video ? (
-              <div>
-                <img
-                  src="https://images.unsplash.com/photo-1590856029826-c7a73142bbf1?w=500&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8dmlkZW8lMjBpY29ufGVufDB8fDB8fHww"
-                  className="w-20 h-20 rounded-full "
-                />
-                <h1
-                  onClick={() => {
-                    setVideo("");
-                  }}
-                  className="text-center cursor-pointer text-red-600"
-                >
-                  remove
-                </h1>
-              </div>
-            ) : (
-              false
-            )}
-          </div>
+      
 
           <div className=" ">
             <Button
@@ -262,4 +237,4 @@ const ProductForm = ({
   );
 };
 
-export default ProductForm;
+export default RecipeForm;

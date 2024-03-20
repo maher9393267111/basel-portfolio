@@ -1,13 +1,12 @@
 import React from 'react';
 import UpdateProduct from '@/components/admin/product/updateProduct';
 import { getDocuments,getDocument } from '@/functions/firebase/getData';
-const EditSubPage = ({product,cats,subcats}) => {
+const EditSubPage = ({product}) => {
     return (
         <div>
             <UpdateProduct
             product={product}
-            cats={cats}
-            subcats={subcats}
+          
             />
         </div>
     );
@@ -26,18 +25,16 @@ export default EditSubPage;
 EditSubPage.getInitialProps = async (context) => {
  
     // context.query.id ==> admin/category/edit/${context.query.id} in browser
-        const product = await getDocument("products", context.query.id);
-        const cats = await getDocuments("cats");
-        const subcats = await getDocuments("subcats");
+        const product = await getDocument("articles", context.query.id);
+        
      
        
-        console.log('single category --<>' , product,cats,subcats)
+        
     
     
      
         return {
             product: product,
-            cats: cats,
-            subcats: subcats,
+           
         };
       };

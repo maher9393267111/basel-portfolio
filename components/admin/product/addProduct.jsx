@@ -10,7 +10,7 @@ import { message } from "antd";
 import AdminLayout from "../AdminLayout";
 
 
-const AddProductMain = ({ cats, subcats, products }) => {
+const AddProductMain = ({  products }) => {
   const [files, setFiles] = useState([]);
   const [videoFile,setVideoFile] = useState("");
   
@@ -35,7 +35,7 @@ const AddProductMain = ({ cats, subcats, products }) => {
     values.timeStamp = serverTimestamp()
 
 
-    await addDoc(collection(db, "products"), values);
+    await addDoc(collection(db, "articles"), values);
 
 
     message.success(`Product Uploaded Successfully`);
@@ -44,7 +44,7 @@ const AddProductMain = ({ cats, subcats, products }) => {
 
   return (
     <AdminLayout>
-      <ProductForm {...{ cats, subcats, onFinish, files, setFiles,videoFile,setVideoFile }} />
+      <ProductForm {...{ onFinish, files, setFiles,videoFile,setVideoFile }} />
     </AdminLayout>
   );
 };

@@ -85,14 +85,14 @@ export default function Navbar() {
             }
             
           >
-            <ul className="flex flex-col !font-ibm text-xl lg:flex-row list-none lg:ml-auto">
+            <ul className="flex flex-col !font-ibm  lg:flex-row list-none lg:ml-auto">
 
 
 {/* //media  <Icon icon="lucide:monitor-play" /> */}
 
               <li className="nav-item">
                 <Link
-                className="px-3 py-2     flex items-center md:text-2xl text-md uppercase font-semibold leading-snug text-white hover:opacity-75"
+                className="px-3 py-2     flex items-center md:text-x text-md uppercase font-semibold leading-snug text-white hover:opacity-75"
                 href="/">
               
                   {/* <Icon  icon="lucide:home" className="text-lg leading-lg text-white opacity-75"/>   */}
@@ -104,7 +104,7 @@ export default function Navbar() {
 
               <li className="nav-item">
                 <Link
-                className="px-3 py-2 flex items-center md:text-2xl text-md uppercase font-semibold leading-snug text-white hover:opacity-75"
+                className="px-3 py-2 flex items-center md:text-x text-md uppercase font-semibold leading-snug text-white hover:opacity-75"
                 href="/articles">
               
                   {/* <Icon  icon="lucide:home" className="text-lg leading-lg text-white opacity-75"/>   */}
@@ -115,7 +115,7 @@ export default function Navbar() {
 
 
 <li className="nav-item"> 
-<button className="languages cursor-pointer bg-transparent  rounded-lg py-2 px-4  text-center text-white    !bg-[#F89B1B] active:scale-110">
+<button className="languages cursor-pointer bg-transparent  rounded-lg py-1 px-4  text-center text-white    !bg-[#F89B1B] active:scale-110">
             {router.locale == "ar" ? (
               <Link href={router.asPath} locale="en">
                  English

@@ -8,7 +8,8 @@ const nextConfig = {
         "res.cloudinary.com",
         "mir-s3-cdn-cf.behance.net",
         "firebasestorage.googleapis.com",
-        "dr-nahas.vercel.app"
+        "dr-nahas.vercel.app",
+        "marketplace.canva.com"
       ],
     },
     // typescript: {

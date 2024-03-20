@@ -6,33 +6,29 @@ import { getDocuments, getDocumentsOrder } from "@/functions/firebase/getData";
 import { serverSideTranslations } from "next-i18next/serverSideTranslations";
 import { useTranslation } from "next-i18next";
 import Layout from "@/components/layout";
-import Hero from '@/components/HomeMain/Hero'
+import Hero from "@/components/HomeMain/Hero";
+import Companies from '@/components/HomeMain/Companies'
+import Works from '@/components/HomeMain/Works'
 
 export default function Index({}) {
+  const { t } = useTranslation("common");
 
-    const { t } = useTranslation("common");
-  
-    const router = useRouter()
-  
+  const router = useRouter();
 
-    console.log("Lodale" , router.locale ,router)
+  console.log("Lodale", router.locale, router);
   //  const aboutus = t("aboutus", { returnObjects: true });
   //  console.log("links", aboutus);
-  
-    return <Layout dir={router.locale === "ar" ? "rtl" : "ltr"}>
 
- 
-    
-    <div className="scroll-smooth mx-6 md:mx-24">
-        
-        
-        <Hero/>
-        
-       
-        
-        
-        </div>;
-        </Layout>
+  return (
+    <Layout dir={router.locale === "ar" ? "rtl" : "ltr"}>
+      <div className="scroll-smooth mx-6 md:mx-28">
+        <Hero />
+        <Companies/>
+        <Works/>
+      </div>
+      
+    </Layout>
+  );
 }
 
 // serverside
