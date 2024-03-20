@@ -1,11 +1,14 @@
 /** @type {import('next').NextConfig} */
+const { i18n } = require("./next-i18next.config");
 const nextConfig = {
+  i18n,
     images: {
       domains: [
         "localhost",
         "res.cloudinary.com",
         "mir-s3-cdn-cf.behance.net",
         "firebasestorage.googleapis.com",
+        "dr-nahas.vercel.app"
       ],
     },
     // typescript: {

@@ -1,61 +1,81 @@
 import React from "react";
+import { useRouter } from "next/router";
+
 import { orderBy, where } from "firebase/firestore";
 import { getDocuments, getDocumentsOrder } from "@/functions/firebase/getData";
+import { serverSideTranslations } from "next-i18next/serverSideTranslations";
+import { useTranslation } from "next-i18next";
+import Layout from "@/components/layout";
+import Hero from '@/components/HomeMain/Hero'
 
+export default function Index({}) {
 
+    const { t } = useTranslation("common");
+  
+    const router = useRouter()
+  
 
-export default function Index({
-  products,
-
-}) {
-  console.log("ProductsPage" + products);
+    console.log("Lodale" , router.locale ,router)
+  //  const aboutus = t("aboutus", { returnObjects: true });
+  //  console.log("links", aboutus);
+  
+    return <Layout dir={router.locale === "ar" ? "rtl" : "ltr"}>
 
  
-
-
-  return (
-    <div className="scroll-smooth">
-     Home
-     
-    </div>
-  );
+    
+    <div className="scroll-smooth mx-6 md:mx-24">
+        
+        
+        <Hero/>
+        
+       
+        
+        
+        </div>;
+        </Layout>
 }
 
 // serverside
-Index.getInitialProps = async (context) => {
-  let products = [];
-  //navbar.jsx href={`/products?category=${item.title.toLowerCase()}`}
-  const category = context.query.category;
-  const subcategory = context.query.subcategory;
-  // step 1
-  const search = context.query.search;
 
-  //console.log("categoryyyyy", category);
-
-  //console.log("subcategoryyyyy", subcategory);
-
-  //    where("fieldname", "==", fieldValue)
-
-  products = await getDocumentsOrder(
-    "products",
-    orderBy("timeStamp", "desc"),
-
-    //category i am searching for all products that have a category name / same as subcategory , else null nothing (filteration)
-    category
-      ? where("category", "==", category)
-      : subcategory
-      ? where("subcategory", "==", subcategory)
-      : null
-  );
-
- 
-
-
-
+export const getStaticProps = async ({ locale }) => {
+  //const allProducts = await api.getAllProducts();
   return {
-    // props from serverside will go to props in clientside
-    products: products,
-
-  
+    props: {
+      ...(await serverSideTranslations(locale, ["common"])),
+      // allProducts,
+    },
   };
 };
+
+// Index.getInitialProps = async (context) => {
+//   let products = [];
+//   //navbar.jsx href={`/products?category=${item.title.toLowerCase()}`}
+//   const category = context.query.category;
+//   const subcategory = context.query.subcategory;
+//   // step 1
+//   const search = context.query.search;
+
+//   //console.log("categoryyyyy", category);
+
+//   //console.log("subcategoryyyyy", subcategory);
+
+//   //    where("fieldname", "==", fieldValue)
+
+//   products = await getDocumentsOrder(
+//     "products",
+//     orderBy("timeStamp", "desc"),
+
+//     //category i am searching for all products that have a category name / same as subcategory , else null nothing (filteration)
+//     category
+//       ? where("category", "==", category)
+//       : subcategory
+//       ? where("subcategory", "==", subcategory)
+//       : null
+//   );
+
+//   return {
+//     // props from serverside will go to props in clientside
+//     products: products,
+
+//   };
+// };

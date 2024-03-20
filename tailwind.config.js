@@ -18,6 +18,14 @@ module.exports = {
     },
     extend: {
 
+      fontFamily: {
+        kufi: ["Noto Kufi Arabic", "sans-serif"],
+        ibm: ['IBM Plex Sans Arabic', 'sans-serif']
+      },
+      colors: {
+        primary: "#171F49",
+      },
+
       animation : {
 marquee : "marquee 30s linear  infinite",
 
