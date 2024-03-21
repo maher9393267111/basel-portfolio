@@ -14,10 +14,10 @@ import { toast } from "react-toastify";
 
 const AdminLayout = ({ children }) => {
   const list = [
-    { id: 1, text: "Admin Dashboard", path: "/admin" },
+    // { id: 1, text: "Admin Dashboard", path: "/admin" },
    
-    { id: 4, text: "Add Article", path: "/admin/product/add" },
-    { id: 5, text: "All Articles", path: "/admin/product/all" },
+    { id: 4, text: "Add Article", path: "/admin/article/add" },
+    { id: 5, text: "All Articles", path: "/admin/article/all" },
 
   ];
 
@@ -91,7 +91,9 @@ const AdminLayout = ({ children }) => {
       <div className="lg:sticky  lg:top-8 mt-12 mb-6 ml-4 flex flex-row gap-2">
         {/* <AiOutlineUser className="text-3xl" /> */}
 
-        <Avatar name={profile?.displayName} src="https://bit.ly/broken-link" />
+    <Link href={'/'}>
+    <Avatar name={profile?.displayName} src="https://bit.ly/broken-link" />
+    </Link>    
       </div>
       <div className="mb-12 flex flex-col lg:flex-row gap-8 ">
         {/* //sidebar */}

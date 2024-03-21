@@ -74,6 +74,7 @@ export default function Article() {
               product?.images?.map((img, index) => {
                 return (
                   <div
+                  key={index}
                     style={{
                       backgroundImage: `url(${product?.images[index]})`,
                       backgroundPosition: "center",

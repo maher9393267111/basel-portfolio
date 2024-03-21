@@ -9,7 +9,9 @@ import {
   FaPhone,
   FaTwitter,
   FaFacebook,
-  FaLinkedin
+  FaLinkedin,
+  FaSnapchat ,
+   FaTiktok 
 } from "react-icons/fa";
 import { useRouter } from "next/router";
 
@@ -55,20 +57,14 @@ const navigation = {
   ],
 
 
-  "Twitter": null,
-  "Instagram":"https://www.instagram.com/logic.4tech/?hl=ar",
-  "Facebook": "https://www.facebook.com/profile.php?id=61554600908983",
-  "website":"https://www.getmenu.ps", 
-  
-  
-  "whatsapp" : `https://wa.me/+972507301710?text=Hello%2C%20I%20want%20to%20chat%20with%20you!`,
+
 
 
   social: [
     {
-      name: "Twitter",
-      href: null,
-      icon: (props) => <FaTwitter {...props} />,
+      name: "Tiktok",
+      href: "https://www.tiktok.com/@basel.alkasab?_t=8kqWVZj1wGM&_r=1",
+      icon: (props) => <FaTiktok{...props} />,
     },
     {
       name: "Facebook",
@@ -77,25 +73,25 @@ const navigation = {
     },
     {
       name: "Whatsapp",
-      href: "https://wa.me/+972507301710?text=Hello%2C%20I%20want%20to%20chat%20with%20you!",
+      href: "https://wtspee.com/905393466368",
       icon: (props) => <FaWhatsapp {...props} />,
     },
     {
       name: "Linkden",
-      href: "https://www.linkedin.com/company/ultra-tech1/?viewAsMember=true",
+      href: "https://www.linkedin.com/in/basel-alkasab-075287246?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app",
       icon: (props) => <FaLinkedin {...props} />,
     },
     
 
     {
-      name: "Telgram",
-      href: null,
-      icon: (props) => <FaTelegram {...props} />,
+      name: "Snapchat",
+      href: "https://www.snapchat.com/add/baselkasaboglu?share_id=4rFIIlCbTKaGAZL_mmSm1Q&locale=ar_TR@numbers=latn",
+      icon: (props) => <FaSnapchat {...props} />,
     },
 
     {
       name: "Instagram",
-      href: "https://www.instagram.com/ultratech.ut",
+      href: "https://www.instagram.com/baselalkasab?igsh=MTZyZzlvYzdqazdpdw==",
       icon: (props) => <FaInstagram {...props} />,
     },
   ],
@@ -109,7 +105,7 @@ const Footer = () => {
   return (
     <footer className="bg-white englishfont">
       <div className="max-w-7xl mx-auto py-10 px-4 overflow-hidden sm:px-6 lg:px-8">
-        <nav
+        {/* <nav
           className="-mx-5 -my-2 flex flex-wrap justify-center"
           aria-label="Footer"
         >
@@ -123,7 +119,9 @@ const Footer = () => {
               </Link>
             </div>
           ))}
-        </nav>
+        </nav> */}
+
+
         <div className="mt-8 flex justify-center space-x-6">
           {navigation.social.map((item) => (
             <a
@@ -134,14 +132,16 @@ const Footer = () => {
             >
               <span className="sr-only">{item.name}</span>
               <item.icon
-                className="h-6 w-6  text-purple-100    hover:text-purple-800"
+                className="h-6 w-6  text-purpl-100 text-primary    "
                 aria-hidden="true"
               />
             </a>
           ))}
         </div>
+
+
         <p className="text-center  mt-6 text-gray-400 shimmer text-2xl font-semibold">
-          &copy; {new Date().getFullYear()} UltraTech.
+          &copy; {new Date().getFullYear()} Baselkasaboglu
           {/* Powered by{' '}
           <a
             className="hover:text-green-600 transition"

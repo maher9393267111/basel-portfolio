@@ -11,24 +11,6 @@ import Image from "next/image";
 const ProductTable = ({ products }) => {
   const [filteredInfo, setFilteredInfo] = useState({});
   const [sortedInfo, setSortedInfo] = useState({});
-  const handleChange = (pagination, filters, sorter) => {
-    console.log("Various parameters", pagination, filters, sorter);
-    setFilteredInfo(filters);
-    setSortedInfo(sorter);
-  };
-  const clearFilters = () => {
-    setFilteredInfo({});
-  };
-  const clearAll = () => {
-    setFilteredInfo({});
-    setSortedInfo({});
-  };
-  const setAgeSort = () => {
-    setSortedInfo({
-      order: "descend",
-      columnKey: "age",
-    });
-  };
 
   const columns = [
     {
@@ -82,14 +64,14 @@ const ProductTable = ({ products }) => {
               <div>
                 <AiFillDelete
                   // send collection name and single category data to delete
-                  onClick={() => handleDelete("products", record, true)}
+                  onClick={() => handleDelete("artcles", record, true)}
                   className=" hover:text-red-700 text-red-500 cursor-pointer"
                   size={"25"}
                 />
               </div>
 
               <div>
-                <Link href={`/admin/product/edit/${record?.id}`}>
+                <Link href={`/admin/article/edit/${record?.id}`}>
                   <AiFillEdit
                     className="hover:text-blue-700 text-blue-500 cursor-pointer"
                     size={"25"}
@@ -122,11 +104,9 @@ const ProductTable = ({ products }) => {
           marginBottom: 16,
         }}
       >
-        <Button onClick={setAgeSort}>Sort age</Button>
-        <Button onClick={clearFilters}>Clear filters</Button>
-        <Button onClick={clearAll}>Clear filters and sorters</Button>
+        
       </Space>
-      <Table onChange={handleChange} columns={columns} dataSource={products} />
+      <Table  columns={columns} dataSource={products} />
     </div>
   );
 };

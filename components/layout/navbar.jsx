@@ -2,6 +2,7 @@ import { useState } from "react";
 import Link from "next/link";
 import { useRouter } from 'next/router'
 import Image from "next/image";
+import { useAuth } from "@/functions/context";
 
 //i18n
 //import en from "../i18n/en"
@@ -31,6 +32,8 @@ export default function Navbar() {
   console.log("links" ,slider)
 
   const router = useRouter()
+
+  const {profile} = useAuth()
 
 
 
@@ -117,6 +120,26 @@ export default function Navbar() {
                 
                 </Link>  
               </li>
+
+
+{profile &&
+              <li className="nav-item">
+                <Link
+                className="px-3 py-2 flex items-center md:text-xl text-md uppercase font-semibold leading-snug text-white hover:opacity-75"
+                href="/admin/product/add">
+              
+                  {/* <Icon  icon="lucide:home" className="text-lg leading-lg text-white opacity-75"/>   */}
+                  <span className="ml-2 ">  
+                  {locale === 'en' ? 'Dashboard'  : 'لوحة التحكم'}
+                  
+                  </span>
+                
+                </Link>  
+              </li>
+}
+
+
+
 
 
 <li className="nav-item"> 
