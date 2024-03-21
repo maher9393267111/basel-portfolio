@@ -1,6 +1,7 @@
 import Image from "next/image";
 import {LaptopsDesktops} from './Data'
 import { useTranslation } from "next-i18next";
+import { Zoom ,Fade } from "react-awesome-reveal";
 
 const ItemCategories = ({ category}) => {
 
@@ -14,17 +15,24 @@ const ItemCategories = ({ category}) => {
 
 
   return (
-    <div className="my-10 px-10">
+    <div className="mb-12 mt-24 px-10">
       <div className="relative py-8 mb-4">
-      <div className="mb-6 text-3xl md:text-4xl font-extrabold capitalize">
+      <div className="mb-2 md:mb-6 text-3xl md:text-4xl font-extrabold capitalize">
+        <Fade direction="bottom">
+
+        
         <h1 className="arabic shimmer  text-center ">
           {t("works")}
         </h1>
+        </Fade>
       </div>
 
 
         <div className="absolute bottom-4 sm:bottom-6  sm:top-1/2 transform sm:-transform-y-1/2 h-1 w-[65%] sm:w-28 bg-secondary transform skew-x-[40deg]"></div>
       </div>
+      <Fade direction="right">
+
+     
       <div className="w-full sm:px-20 mdPlus:px-0 max-w-[1400px] mx-auto grid 
        grid-cols-[repeat(auto-fill,minmax(100%,1fr))] sm:grid-cols-[repeat(auto-fill,minmax(320px,1fr))]
       
@@ -57,6 +65,7 @@ const ItemCategories = ({ category}) => {
           );
         })}
       </div>
+      </Fade>
     </div>
   );
 };

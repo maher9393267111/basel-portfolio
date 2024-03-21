@@ -12,6 +12,7 @@ getDocumentsOrder,
 import { orderBy, where } from "firebase/firestore";
 import Loader from "@/components/common/Loader";
 import Link from 'next/link'
+import { Zoom ,Fade } from "react-awesome-reveal";
 
   import { useRouter } from "next/router";
 export default function Recipes() {
@@ -57,10 +58,14 @@ export default function Recipes() {
 <div dir={ locale === 'en' ? 'ltr' :'rtl'}>
     
 <div className=" px-4 md:px-20 py-8 md:py-16 flex justify-center  items-center text-[#121212] flex-col">
+  <Fade direction="top">
+
+  
             <p className=" text-center  font-Jost text-2xl md:text-5xl font-medium text-primar shimmer mb-4 arabic">{t('articlesTitle')}</p>
+            </Fade>
             {/* <p className=" text-center text-[#121212CC] font-Jost text-base md:text-xl mt-2">
               We solve the world's most serious and complex medical challenges.</p> */}
-
+<Fade direction="right">
             <div className=" w-full arabic  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                 {products?.map((item, index) => (
                     <div key={index} className=" w-full border border-[#EAEBF0] rounded-[10px] mt-6 md:mt-11 flex flex-col relative">
@@ -84,7 +89,7 @@ export default function Recipes() {
                     </div>
                 ))}            
             </div>
-
+</Fade>
             {/* <Link href='/blog'>
             <button className=' bg-gradient-to-r from-[#B79843] to-[#82620F] via-[#a18330] px-7 md:px-[18px] py-2 md:py-3 rounded-[50px] mt-8 md:mt-16 text-white font-Jost font-semibold text-sm md:text-base'>Show more</button>
             </Link> */}

@@ -6,6 +6,7 @@ import { Autoplay ,Pagination } from "swiper/modules";
 // import { Pagination, Autoplay } from 'swiper'
 // import { cpBrandsData } from "./Data";
 import { useTranslation } from "next-i18next";
+import { Zoom ,Fade } from "react-awesome-reveal";
 
 
 import "swiper/css";
@@ -41,10 +42,14 @@ const BrandsSlider = ({}) => {
   return (
     <div className="brands_slide w-full mt-24 mb-10 ">
       <div className="mb-6 text-3xl md:text-4xl font-extrabold capitalize">
+
         <h1 className=" arabic shimmer  text-center">
           {t("mecompanies")}
         </h1>
       </div>
+      <Fade direction="right">
+
+     
       <Swiper
          breakpoints={breakpoints}
          spaceBetween={50}
@@ -104,6 +109,7 @@ const BrandsSlider = ({}) => {
           );
         })}
       </Swiper>
+      </Fade>
     </div>
   );
 };

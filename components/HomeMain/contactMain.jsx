@@ -13,6 +13,7 @@ import { FaLinkedinIn, FaYoutube } from "react-icons/fa";
 // import { socialMediaRedirect } from "@/constants";
 
 import { useTranslation } from "next-i18next";
+import { Zoom ,Fade } from "react-awesome-reveal";
 
 export default function ContactUs() {
   const [loading, setLoading] = useState(false);
@@ -87,7 +88,9 @@ export default function ContactUs() {
       className="w-full h-fit arabic md:h-[650px] my-24 text-black px-10 !bg-white"
       id="contactUs"
     >
+      
       <div className="m-auto w-[90%] !bg-white h-full flex flex-col md:flex-row items-center justify-center rounded-2xl">
+      
         <div
           className="relative h-[300px] md:h-full w-full md:w-[30%] z-20 rounded-l-2xl"
           style={{
@@ -159,8 +162,10 @@ export default function ContactUs() {
 
           </div>
         </div>
+       
         <div className="h-fit md:h-full w-full md:w-[70%] gil-reg">
           <div className="h-full w-full m-auto p-4 md:p-8">
+          <Fade direction="right">
             <form
               className="flex flex-col items-center justify-between form"
               onSubmit={(e) => Submit(e)}
@@ -173,7 +178,7 @@ export default function ContactUs() {
                 
               </div>
               <div className="w-[90%] flex flex-row items-center justify-between pt-6">
-                {/* <Fade bottom> */}
+           
                   <div className="relative mb-6 w-[100%]">
                     <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                       <AiOutlineUser />
@@ -188,7 +193,7 @@ export default function ContactUs() {
                       placeholder={t("name")}
                     />
                   </div>
-                {/* </Fade> */}
+                
                 {/* <div className="relative mb-6 w-[45%]">
                   <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                     <AiOutlineUser />
@@ -267,9 +272,17 @@ export default function ContactUs() {
                 </div>
               {/* </Fade> */}
             </form>
+</Fade>
+
+
           </div>
         </div>
+
+
+
+
       </div>
+      
     </div>
   );
 }
