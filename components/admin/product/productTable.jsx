@@ -32,24 +32,16 @@ const ProductTable = ({ products }) => {
 
   const columns = [
     {
-      title: "Products",
+      title: "English title",
       // same name from database   // category={title ,....}
       dataIndex: "title",
+    },
 
-    },
-    {
-      title: "English Title",
-      // same name from database   // category={title ,....}
-      dataIndex: "title",
-    },
     {
       title: "Arabic Title",
       // same name from database   // category={title ,....}
       dataIndex: "titlear",
     },
-    
-
-
 
     {
       title: "Image",
@@ -74,8 +66,6 @@ const ProductTable = ({ products }) => {
               src={record.images[0]}
               alt=""
             />
-
-
           </div>
         );
       },
@@ -133,9 +123,8 @@ const ProductTable = ({ products }) => {
         }}
       >
         <Button onClick={setAgeSort}>Sort age</Button>
-                 <Button onClick={clearFilters}>Clear filters</Button>
-                 <Button onClick={clearAll}>Clear filters and sorters</Button>
-              
+        <Button onClick={clearFilters}>Clear filters</Button>
+        <Button onClick={clearAll}>Clear filters and sorters</Button>
       </Space>
       <Table onChange={handleChange} columns={columns} dataSource={products} />
     </div>
