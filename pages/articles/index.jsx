@@ -12,7 +12,21 @@ getDocumentsOrder,
 import { orderBy, where } from "firebase/firestore";
 import Loader from "@/components/common/Loader";
 import Link from 'next/link'
+
+  import { useRouter } from "next/router";
 export default function Recipes() {
+
+
+  
+  
+  
+ 
+    const { t } = useTranslation();
+    const {locale}= useRouter();
+
+
+
+
   const [products, setProducts] = useState([]);
   const [loacding, setLoading] = useState(true);
 
@@ -40,11 +54,12 @@ export default function Recipes() {
 {loacding ? <Loader/> :
 
 
-<div>
+<div dir={ locale === 'en' ? 'ltr' :'rtl'}>
     
 <div className=" px-4 md:px-20 py-8 md:py-16 flex justify-center  items-center text-[#121212] flex-col">
-            <p className=" text-center  font-Jost text-2xl md:text-5xl font-medium">Our Blog</p>
-            <p className=" text-center text-[#121212CC] font-Jost text-base md:text-xl mt-2">We solve the world's most serious and complex medical challenges.</p>
+            <p className=" text-center  font-Jost text-2xl md:text-5xl font-medium text-primary mb-4">{t('articlesTitle')}</p>
+            {/* <p className=" text-center text-[#121212CC] font-Jost text-base md:text-xl mt-2">
+              We solve the world's most serious and complex medical challenges.</p> */}
 
             <div className=" w-full  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                 {products?.map((item, index) => (
@@ -53,12 +68,16 @@ export default function Recipes() {
                         </div>
                         <div className=" px-8 py-6">
                             <p className=' font-Jost text-[#5F6D7E] text-sm font-medium'>{item.date}</p>
-                            <p className=' mt-5 text-xl md:text-[22px] md:leading-[30px] font-Jost font-semibold'>{item.title}</p>
-                            <p className=' mt-4 text-[#121212CC] text-base font-normal font-Jost pb-8'>
-                            {parse(item?.desc.slice(0,12))}
-                            </p>
+                            <p className=' mt-5 text-xl md:text-[22px] pb-9 md:leading-[30px] font-Jost font-semibold'>{locale === 'en' ?  item.title :  item?.titlear}</p>
+                            {/* <p className=' mt-4 text-[#121212CC] text-base font-normal font-Jost pb-8'>
+                            {parse( locale === 'en' ?  item?.desc.slice(0,12) :  item?.descar.slice(0,12  ))}
+                            </p> */}
                             <Link href={`/articles/single?id=${item?.id}`}><button className=' flex items-center space-x-2 absolute bottom-6'>
-                                <p className=' gradient-text text-[18px] font-Jost font-semibold text-primary'>Learn more</p> 
+                                <p className=' gradient-text text-[18px] font-Jost font-semibold text-primary'>
+                                  
+                                  {locale === 'en' ? 'Learn more' : 'تفاصيل المقالة'}
+                                  
+                                  </p> 
                                 {/* <img src={ arrLeft } className='' alt="" /> */}
                             </button></Link> 
                         </div>

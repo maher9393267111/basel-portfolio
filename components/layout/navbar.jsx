@@ -23,8 +23,8 @@ export default function Navbar() {
   
   const [navbarOpen, setNavbarOpen] = useState(false)
 
-  /* const { locale } = useRouter()
-  const i18n = locale === "en" ? en : es */
+   const { locale } = useRouter()
+  //const lang = locale === "en" ? en : es */
   const {t} = useTranslation("common") 
 
   const slider= t('slider', { returnObjects: true }) 
@@ -63,7 +63,12 @@ export default function Navbar() {
                 
                   <img className="w-18 logo object-cover h-14 mx-3" src="/assets/images/sweetimages/sweetsips-final-logo White.png" alt="" />
                   {/* <Icon icon={spaIcon} className=" logo text-4xl mr-2"/> */}
-                  <span className="text-base">basel kasaboglu</span>
+                  <span className="text-base">
+                    {locale === 'en' ? ' basel kasaboglu'  : 'باسل قصاب اوغلو'}
+                   
+                    
+                    
+                    </span>
                 
             </Link>  
             
