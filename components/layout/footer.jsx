@@ -66,11 +66,11 @@ const navigation = {
       href: "https://www.tiktok.com/@basel.alkasab?_t=8kqWVZj1wGM&_r=1",
       icon: (props) => <FaTiktok{...props} />,
     },
-    {
-      name: "Facebook",
-      href: "https://www.facebook.com/profile.php?id=61554600908983",
-      icon: (props) => <FaFacebook {...props} />,
-    },
+    // {
+    //   name: "Facebook",
+    //   href: "https://www.facebook.com/profile.php?id=61554600908983",
+    //   icon: (props) => <FaFacebook {...props} />,
+    // },
     {
       name: "Whatsapp",
       href: "https://wtspee.com/905393466368",
