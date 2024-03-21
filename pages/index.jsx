@@ -9,6 +9,7 @@ import Layout from "@/components/layout";
 import Hero from "@/components/HomeMain/Hero";
 import Companies from '@/components/HomeMain/Companies'
 import Works from '@/components/HomeMain/Works'
+import ContactUs from "@/components/HomeMain/contactMain";
 
 export default function Index({}) {
   const { t } = useTranslation("common");
@@ -25,6 +26,7 @@ export default function Index({}) {
         <Hero />
         <Companies/>
         <Works/>
+        <ContactUs/>
       </div>
       
     </Layout>

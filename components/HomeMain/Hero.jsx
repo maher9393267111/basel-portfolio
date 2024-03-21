@@ -37,6 +37,10 @@ const MainHero = () => {
             width="481"
             height={"502"}
           />
+
+
+
+
           {/* <div className="  absolute right-0 -z-10 translate-x-1/2 -translate-y-1/2	">
             <Image
               src="/widgets/points.svg"

@@ -8,6 +8,13 @@
     "mecompanies":"شركاتي",
     "articlesTitle":"مقالاتي",
     "sigleArticle":"المقالة",
+    "contactTitle":"تواصل معي",
+    "name":"الاسم الكامل",
+    "message":"الرسالة",
+    "subject":"الموضوع",
+    "phone":"رقم الهاتف",
+    "email":"البريد",
+    "send":"إرسال",
     "companies": [
         { 
           

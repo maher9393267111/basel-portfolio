@@ -7,6 +7,13 @@
     "works":"My works",
     "articlesTitle":"My Articles",
     "sigleArticle":"Article",
+    "contactTitle":"Contact with me",
+    "name":"name",
+    "message":"message",
+    "subject":"subject",
+    "phone":"phone number",
+    "email":"email",
+    "send":"Send",
      
   "companies": [
     { 

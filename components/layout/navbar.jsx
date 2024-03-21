@@ -126,7 +126,7 @@ export default function Navbar() {
               <li className="nav-item">
                 <Link
                 className="px-3 py-2 flex items-center md:text-xl text-md uppercase font-semibold leading-snug text-white hover:opacity-75"
-                href="/admin/product/add">
+                href="/admin/article/add">
               
                   {/* <Icon  icon="lucide:home" className="text-lg leading-lg text-white opacity-75"/>   */}
                   <span className="ml-2 ">  

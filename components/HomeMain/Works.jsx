@@ -25,7 +25,11 @@ const ItemCategories = ({ category}) => {
 
         <div className="absolute bottom-4 sm:bottom-6  sm:top-1/2 transform sm:-transform-y-1/2 h-1 w-[65%] sm:w-28 bg-secondary transform skew-x-[40deg]"></div>
       </div>
-      <div className="w-full sm:px-20 mdPlus:px-0 max-w-[1400px] mx-auto grid grid-cols-[repeat(auto-fill,minmax(100%,1fr))] sm:grid-cols-[repeat(auto-fill,minmax(320px,1fr))] items-stretch gap-12">
+      <div className="w-full sm:px-20 mdPlus:px-0 max-w-[1400px] mx-auto grid 
+       grid-cols-[repeat(auto-fill,minmax(100%,1fr))] sm:grid-cols-[repeat(auto-fill,minmax(320px,1fr))]
+      
+      
+      items-stretch gap-12">
         {items.map((item) => {
           return (
             <div key={item.id} className="pt-[62.5%] relative arabic">
