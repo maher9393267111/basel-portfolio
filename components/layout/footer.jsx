@@ -122,7 +122,7 @@ const Footer = () => {
         </nav> */}
 
 
-        <div className="mt-8 flex justify-center space-x-6">
+        <div className="mt-8 flex justify-center space-x-8">
           {navigation.social.map((item) => (
             <a
             target="_blank"
@@ -132,7 +132,7 @@ const Footer = () => {
             >
               <span className="sr-only">{item.name}</span>
               <item.icon
-                className="h-6 w-6  text-purpl-100 text-primary    "
+                className="h-8 w-8  text-purpl-100 text-primary    "
                 aria-hidden="true"
               />
             </a>
