@@ -31,7 +31,7 @@ const MainHero = () => {
             />
           </div>
           <Image
-          className="mt-12"
+          className="mt-12 rounded-[16px]"
             src="/me2.jpg"
             alt="Doctor Nahas doctor near me"
             width="481"
