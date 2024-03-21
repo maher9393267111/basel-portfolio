@@ -20,9 +20,10 @@
 }
 
 body {
-  font-family: "SF Pro Text", "SF Pro Icons", "Helvetica Neue", "Helvetica",
-    "Arial", sans-serif;
-  margin: 0 auto;
+
+  font-family: 'Bahij !important';
+  
+  /* margin: 0 auto;
   font-size: 16px;
   line-height: 1.65;
   word-break: break-word;
@@ -31,7 +32,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-rendering: optimizeLegibility;
-  hyphens: auto;
+  hyphens: auto; */
 
 }
 
@@ -41,10 +42,74 @@ body {
 }
 
 
+/* ----------- */
+
+@font-face {
+  font-family: 'Bahij';
+  font-style: normal;
+  font-weight: 100;
+  src: url('../public/fonts/Bahij_TheSansArabic-ExtraLight.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Bahij';
+  font-style: normal;
+  font-weight: 200;
+  src: url('../public/fonts/Bahij_TheSansArabic-SemiLight.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Bahij';
+  font-style: normal;
+  font-weight: 300;
+  src: url('../public/fonts/Bahij_TheSansArabic-Light.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Bahij';
+  font-style: normal;
+  font-weight: 400;
+  src: url('../public/fonts/Bahij_TheSansArabic-Plain.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Bahij';
+  font-style: normal;
+  font-weight: 500;
+  src: url('../public/fonts/Bahij\ Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Bahij';
+  font-style: normal;
+  font-weight: 600;
+  src: url('../public/fonts/Bahij Bold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Bahij';
+  font-style: normal;
+  font-weight: 700;
+  src: url('../public/fonts/Bahij_TheSansArabic-ExtraBold.ttf') format('truetype');
+}
+@font-face {
+  font-family: 'Bahij';
+  font-style: normal;
+  font-weight: 800;
+  src: url('../public/fonts/Bahij_TheSansArabic-Black 10.ttf') format('truetype');
+}
+
+
+
+.arabic{
+
+  font-family: 'Bahij';
+
+
+}
+/* -------- */
+
+
+
+
 @layer base {
   * {
     @apply select-none;
-    /* font-family: "DroidSansMono", sans-serif; */
+     /* font-family: "bahiji !important";  */
   }
 
 }
@@ -63,4 +128,92 @@ body {
 
 .slider_title {
   text-shadow: 3px 3px 2px #ffffff !important;
+}
+
+
+.shimmer {
+  /* text-align: center; */
+  color: rgba(255, 255, 255, 0.1);
+  background: -webkit-gradient(
+      linear,
+      left top,
+      right top,
+      from(#ad832d),
+      to(#ad832d),
+      color-stop(0.3, #fffba4)
+  );
+  background: -moz-gradient(
+      linear,
+      left top,
+      right top,
+      from(#ad832d),
+      to(#ad832d),
+      color-stop(0.3, #fffba4)
+  );
+  background: gradient(
+      linear,
+      left top,
+      right top,
+      from(#ad832d),
+      to(#ad832d),
+      color-stop(0.3, #fffba4)
+  );
+  -webkit-background-size: 70px 100%;
+  -moz-background-size: 70px 100%;
+  background-size: 70px 100%;
+  -webkit-background-clip: text;
+  -moz-background-clip: text;
+  background-clip: text;
+  -webkit-animation-name: shimmer;
+  -moz-animation-name: shimmer;
+  animation-name: shimmer;
+  -webkit-animation-duration: 2s;
+  -moz-animation-duration: 2s;
+  animation-duration: 2s;
+  -webkit-animation-iteration-count: infinite;
+  -moz-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  background-color: #ad832d;
+}
+
+@-moz-keyframes shimmer {
+  0% {
+      background-position: top left;
+  }
+
+  100% {
+      background-position: top right;
+  }
+}
+
+@-webkit-keyframes shimmer {
+  0% {
+      background-position: top left;
+  }
+
+  100% {
+      background-position: top right;
+  }
+}
+
+@-o-keyframes shimmer {
+  0% {
+      background-position: top left;
+  }
+
+  100% {
+      background-position: top right;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+      background-position: top left;
+  }
+
+  100% {
+      background-position: top right;
+  }
 }

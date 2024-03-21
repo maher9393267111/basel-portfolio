@@ -63,7 +63,7 @@ export default function Navbar() {
                 
                   <img className="w-18 logo object-cover h-14 mx-3" src="/assets/images/sweetimages/sweetsips-final-logo White.png" alt="" />
                   {/* <Icon icon={spaIcon} className=" logo text-4xl mr-2"/> */}
-                  <span className="text-base">
+                  <span className="text-xl arabic shimmer">
                     {locale === 'en' ? ' basel kasaboglu'  : 'باسل قصاب اوغلو'}
                    
                     
@@ -90,7 +90,7 @@ export default function Navbar() {
             }
             
           >
-            <ul className="flex flex-col !font-ib  lg:flex-row list-none lg:ml-auto">
+            <ul className="flex flex-col !font-ib arabic  lg:flex-row list-none lg:ml-auto">
 
 
 {/* //media  <Icon icon="lucide:monitor-play" /> */}
@@ -120,7 +120,7 @@ export default function Navbar() {
 
 
 <li className="nav-item"> 
-<button className="languages cursor-pointer bg-transparent  rounded-lg py-1 px-4  text-center text-white    !bg-[#F89B1B] active:scale-110">
+<button className="languages md:mt-[6px] cursor-pointer bg-transparent  rounded-lg py-1 px-4  text-center text-white    !bg-[#F89B1B] active:scale-110">
             {router.locale == "ar" ? (
               <Link href={router.asPath} locale="en">
                  English

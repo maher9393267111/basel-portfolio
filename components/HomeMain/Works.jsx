@@ -17,7 +17,7 @@ const ItemCategories = ({ category}) => {
     <div className="my-10 px-10">
       <div className="relative py-8 mb-4">
       <div className="mb-6 text-3xl md:text-4xl font-extrabold capitalize">
-        <h1 className=" !text-primary font-kuf  bg-clip-tex w-fit mx-auto text-transparent bg-gradient-to- from-primar to-secondar">
+        <h1 className="arabic shimmer  text-center ">
           {t("works")}
         </h1>
       </div>
@@ -28,7 +28,7 @@ const ItemCategories = ({ category}) => {
       <div className="w-full sm:px-20 mdPlus:px-0 max-w-[1400px] mx-auto grid grid-cols-[repeat(auto-fill,minmax(100%,1fr))] sm:grid-cols-[repeat(auto-fill,minmax(320px,1fr))] items-stretch gap-12">
         {items.map((item) => {
           return (
-            <div key={item.id} className="pt-[62.5%] relative">
+            <div key={item.id} className="pt-[62.5%] relative arabic">
               <div className="absolute inset-0 w-full h-full group rounded-md overflow-hidden">
                 <Image
                   src={item.image}

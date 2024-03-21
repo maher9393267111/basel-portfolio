@@ -11,7 +11,7 @@ const MainHero = () => {
   return (
     <div className="gap-y  flex-col  lg:flex-row  mt-12 flex flex-wrap items-center justify-between gap-x-12 lg:-mt-1">
       <div className=" flex-1">
-        <h1 className=" text-primary relative text-2xl md:text-3xl  font-bold  font-kuf font-normal  mb-4 mt-3  md:max-w-[30ch] ">
+        <h1 className="arabic text-primary relative text-2xl md:text-3xl  font-bold  font-kuf font-normal  mb-4 mt-3  md:max-w-[30ch] ">
     {t("me")}
       
         </h1>

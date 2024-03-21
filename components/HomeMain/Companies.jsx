@@ -41,7 +41,7 @@ const BrandsSlider = ({}) => {
   return (
     <div className="brands_slider w-full mt-16 mb-10 ">
       <div className="mb-6 text-3xl md:text-4xl font-extrabold capitalize">
-        <h1 className=" !text-primary font-kuf  bg-clip-tex w-fit mx-auto text-transparent bg-gradient-to- from-primar to-secondar">
+        <h1 className=" arabic shimmer  text-center">
           {t("mecompanies")}
         </h1>
       </div>
@@ -71,7 +71,7 @@ const BrandsSlider = ({}) => {
               className="min-w-[140px] p-4 !min-h-[230px] mb-12 bg-white rounded-lg shadow-xl"
             >
               <div
-                className="  w-full h-full p-2 py-4 filter grayscale brightness-1/2 hover:filter-none transition duration-300"
+                className=" arabic  w-full h-full p-2 py-4 filter grayscale brightness-1/2 hover:filter-none transition duration-300"
                 
               >
 

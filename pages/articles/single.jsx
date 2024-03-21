@@ -53,14 +53,14 @@ export default function Article() {
   return (
     <MainLayout>
       {product?.title && (
-        <div className="mt-12 w-full md:mt-16 px-4 md:px-20 font-Jost text-[#121212]">
+        <div className="mt-12 w-full arabic md:mt-16 px-4 md:px-20 font-Jost text-[#121212]">
           <span className=" flex flex-row items- space-x-3 items-center">
             <Link href="/">
               <p className=" text-[#121212] font-normal text-base">{t('home')}</p>
             </Link>
             <img className="w-4 h-4" src="/vector.svg" alt="" />
             <Link href="/blog">
-              <p className=" text-[#121212] font-normal text-base">{t('singleTitle')}</p>
+              <p className=" text-[#121212] font-normal text-base arabic">{t('sigleArticle')}</p>
             </Link>
           </span>
           <div className=" w-full flex flex-col items-center justify-center mt-8">

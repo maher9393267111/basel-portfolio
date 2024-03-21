@@ -57,11 +57,11 @@ export default function Recipes() {
 <div dir={ locale === 'en' ? 'ltr' :'rtl'}>
     
 <div className=" px-4 md:px-20 py-8 md:py-16 flex justify-center  items-center text-[#121212] flex-col">
-            <p className=" text-center  font-Jost text-2xl md:text-5xl font-medium text-primary mb-4">{t('articlesTitle')}</p>
+            <p className=" text-center  font-Jost text-2xl md:text-5xl font-medium text-primary mb-4 arabic">{t('articlesTitle')}</p>
             {/* <p className=" text-center text-[#121212CC] font-Jost text-base md:text-xl mt-2">
               We solve the world's most serious and complex medical challenges.</p> */}
 
-            <div className=" w-full  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+            <div className=" w-full arabic  grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
                 {products?.map((item, index) => (
                     <div key={index} className=" w-full border border-[#EAEBF0] rounded-[10px] mt-6 md:mt-11 flex flex-col relative">
                         <div style={{backgroundImage:`url(${item.images[0]})`, backgroundPosition:'center', backgroundSize:'cover'}} className=" w-full h-[220px] bg-[#242424] rounded-t-[10px]">
