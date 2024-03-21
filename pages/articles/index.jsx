@@ -57,7 +57,7 @@ export default function Recipes() {
 <div dir={ locale === 'en' ? 'ltr' :'rtl'}>
     
 <div className=" px-4 md:px-20 py-8 md:py-16 flex justify-center  items-center text-[#121212] flex-col">
-            <p className=" text-center  font-Jost text-2xl md:text-5xl font-medium text-primary mb-4 arabic">{t('articlesTitle')}</p>
+            <p className=" text-center  font-Jost text-2xl md:text-5xl font-medium text-primar shimmer mb-4 arabic">{t('articlesTitle')}</p>
             {/* <p className=" text-center text-[#121212CC] font-Jost text-base md:text-xl mt-2">
               We solve the world's most serious and complex medical challenges.</p> */}
 
@@ -85,9 +85,9 @@ export default function Recipes() {
                 ))}            
             </div>
 
-            <Link href='/blog'>
+            {/* <Link href='/blog'>
             <button className=' bg-gradient-to-r from-[#B79843] to-[#82620F] via-[#a18330] px-7 md:px-[18px] py-2 md:py-3 rounded-[50px] mt-8 md:mt-16 text-white font-Jost font-semibold text-sm md:text-base'>Show more</button>
-            </Link>
+            </Link> */}
         </div>
     
     
