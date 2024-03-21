@@ -104,7 +104,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-white englishfont">
-      <div className="max-w-7xl mx-auto py-10 px-4 overflow-hidden sm:px-6 lg:px-8">
+      <div className="max-w-8xl mx-auto py-10 px-4 overflow-hidden sm:px-6 lg:px-8">
         {/* <nav
           className="-mx-5 -my-2 flex flex-wrap justify-center"
           aria-label="Footer"
@@ -122,13 +122,13 @@ const Footer = () => {
         </nav> */}
 
 
-        <div className="mt-8 flex justify-center space-x-8">
+        <div className="mt-8 flex justify-center gap-6">
           {navigation.social.map((item) => (
             <a
             target="_blank"
               key={item.name}
               href={item.href}
-              className="text-gray-400 hover:text-gray-500"
+              className="text-primary hover:text-primary"
             >
               <span className="sr-only">{item.name}</span>
               <item.icon
@@ -141,7 +141,7 @@ const Footer = () => {
 
 
         <p className="text-center  mt-6 text-gray-400 shimmer text-2xl font-semibold">
-          &copy; {new Date().getFullYear()} Baselkasaboglu
+           Baselkasaboglu
           {/* Powered by{' '}
           <a
             className="hover:text-green-600 transition"
