@@ -9,7 +9,7 @@ import {
 } from "react-icons/ai";
 import { FaLinkedinIn, FaYoutube } from "react-icons/fa";
 // import HoverButton from "./reusableComponent/hoverButton";
-import { Fade } from "react-reveal";
+
 // import { socialMediaRedirect } from "@/constants";
 
 import { useTranslation } from "next-i18next";
@@ -173,7 +173,7 @@ export default function ContactUs() {
                 
               </div>
               <div className="w-[90%] flex flex-row items-center justify-between pt-6">
-                <Fade bottom>
+                {/* <Fade bottom> */}
                   <div className="relative mb-6 w-[100%]">
                     <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                       <AiOutlineUser />
@@ -188,7 +188,7 @@ export default function ContactUs() {
                       placeholder={t("name")}
                     />
                   </div>
-                </Fade>
+                {/* </Fade> */}
                 {/* <div className="relative mb-6 w-[45%]">
                   <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                     <AiOutlineUser />
@@ -201,7 +201,7 @@ export default function ContactUs() {
                   />
                 </div> */}
               </div>
-              <Fade bottom>
+              {/* <Fade bottom> */}
                 <div className="relative mb-6 w-[90%]">
                   <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                     <AiOutlineMail />
@@ -216,8 +216,8 @@ export default function ContactUs() {
                     placeholder={t("email")}
                   />
                 </div>
-              </Fade>
-              <Fade bottom>
+              {/* </Fade> */}
+              {/* <Fade bottom> */}
                 <div className="relative mb-6 w-[90%]">
                   <div className="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
                     <AiOutlineMobile />
@@ -231,8 +231,8 @@ export default function ContactUs() {
                     placeholder={t("phone")}
                   />
                 </div>
-              </Fade>
-              <Fade bottom>
+              {/* </Fade> */}
+              {/* <Fade bottom> */}
                 <div className="relative mb-6 w-[90%]">
                   <textarea
                     name="Message"
@@ -251,9 +251,9 @@ export default function ContactUs() {
                     defaultValue={new Date().toISOString().substring(0, 10)}
                   />
                 </div>
-              </Fade>
+              {/* </Fade> */}
 
-              <Fade bottom>
+              {/* <Fade bottom> */}
                 <div className="flex flex-row justify-end w-[90%]">
                   <button className="gil-reg  lg:text-lg flex flex-row items-center justify-center hover:bg-primary hover:text-white  min-w-[120px] lg:min-w-[140px] lg:min-h-[50px] min-h-[40px] mt-4   border shimme !bg-primary border-primary w-full h-12 !rounded-xl text-xl text-white">
                     {t("send")}
@@ -265,7 +265,7 @@ export default function ContactUs() {
                     loading={loading}
                   /> */}
                 </div>
-              </Fade>
+              {/* </Fade> */}
             </form>
           </div>
         </div>
