@@ -16,12 +16,3 @@ const AddProductPage = ({}) => {
 export default AddProductPage;
 
 
-// serverside
-AddProductPage.getInitialProps = async (context) => {
-  
-  
-    return {
-    
-    };
-  };
-  
