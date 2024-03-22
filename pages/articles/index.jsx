@@ -59,7 +59,13 @@ export default function Recipes() {
 {/* {loacding ? <Loader/> : */}
 
 {/* <Fade direction="right">  */}
-<div className="min-h-[80vh] " dir={ locale === 'en' ? 'ltr' :'rtl'}>
+<div
+ 
+    data-aos="fade-right"
+    data-aos-delay="200"
+    data-aos-easing="ease-in-sine" data-aos-duration="300"
+
+className="min-h-[80vh] " dir={ locale === 'en' ? 'ltr' :'rtl'}>
     
 <div className=" px-4 md:px-20 py-8 md:py-16 flex justify-center  items-center text-[#121212] flex-col">
   <Fade direction="top">

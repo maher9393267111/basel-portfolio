@@ -85,6 +85,9 @@ export default function ContactUs() {
 
   return (
     <div
+    data-aos="fade-left"
+    data-aos-delay="200"
+    data-aos-easing="ease-in-sine" data-aos-duration="300"
       className="w-full h-fit arabic md:h-[650px] my-24 text-black px-10 !bg-white"
       id="contactUs"
     >

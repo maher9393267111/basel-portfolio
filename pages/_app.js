@@ -28,7 +28,7 @@ const MyApp=({ Component, pageProps }) =>{
     useEffect(() => {
       
         AOS.init({
-            once: true,
+           // once: true,
             // Animations always disabled in dev mode; disabled on phones in prod
             disable:  "phone",
             duration: 700,
