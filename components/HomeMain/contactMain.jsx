@@ -165,7 +165,7 @@ export default function ContactUs() {
        
         <div className="h-fit md:h-full w-full md:w-[70%] gil-reg">
           <div className="h-full w-full m-auto p-4 md:p-8">
-          <Fade direction="right">
+          {/* <Fade direction="right"> */}
             <form
               className="flex flex-col items-center justify-between form"
               onSubmit={(e) => Submit(e)}
@@ -272,7 +272,7 @@ export default function ContactUs() {
                 </div>
               {/* </Fade> */}
             </form>
-</Fade>
+{/* </Fade> */}
 
 
           </div>

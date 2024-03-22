@@ -34,7 +34,7 @@ const video ='https://www.tiktok.com/@basel.alkasab/video/7334373145417141510?is
 
         <div className="absolute bottom-4 sm:bottom-6  sm:top-1/2 transform sm:-transform-y-1/2 h-1 w-[65%] sm:w-28 bg-secondary transform skew-x-[40deg]"></div>
       </div>
-      <Fade direction="right">
+      {/* <Fade direction="right"> */}
 
      
       <div className="w-full sm:px-20 mdPlus:px-0 max-w-[1400px] mx-auto grid 
@@ -55,7 +55,7 @@ const video ='https://www.tiktok.com/@basel.alkasab/video/7334373145417141510?is
           );
         })}
       </div>
-      </Fade>
+      {/* </Fade> */}
     </div>
   );
 };

@@ -58,7 +58,7 @@ export default function Recipes() {
 
 {/* {loacding ? <Loader/> : */}
 
-<Fade direction="right"> 
+{/* <Fade direction="right">  */}
 <div className="min-h-[80vh] " dir={ locale === 'en' ? 'ltr' :'rtl'}>
     
 <div className=" px-4 md:px-20 py-8 md:py-16 flex justify-center  items-center text-[#121212] flex-col">
@@ -102,7 +102,7 @@ export default function Recipes() {
     
     </div>
 
-</Fade>
+{/* </Fade> */}
 
     
     {/* } */}

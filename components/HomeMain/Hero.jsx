@@ -15,13 +15,13 @@ const MainHero = () => {
 
      
       <div className=" flex-1">
-      <Fade direction="right">
+      {/* <Fade direction="right"> */}
         <h1 className="arabic text-primary relative text-2xl md:text-3xl  font-bold  font-kuf font-normal  mb-4 mt-3  md:max-w-[30ch] ">
     {t("me")}
       
         </h1>
 
-</Fade>
+{/* </Fade> */}
         
       </div>
     
@@ -44,7 +44,7 @@ const MainHero = () => {
               height={"105"}
             />
           </div>
-          <Fade direction="left">
+          {/* <Fade direction="left"> */}
           <Image
           className="mt-12 rounded-[16px]"
             src="/me2.jpg"
@@ -53,7 +53,7 @@ const MainHero = () => {
             height={"502"}
           />
 
-          </Fade>
+          {/* </Fade> */}
 
 
 

@@ -47,7 +47,7 @@ const BrandsSlider = ({}) => {
           {t("mecompanies")}
         </h1>
       </div>
-      <Fade direction="right">
+      {/* <Fade direction="right"> */}
 
      
       <Swiper
@@ -109,7 +109,7 @@ const BrandsSlider = ({}) => {
           );
         })}
       </Swiper>
-      </Fade>
+      {/* </Fade> */}
     </div>
   );
 };
