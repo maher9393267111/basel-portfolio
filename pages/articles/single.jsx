@@ -59,7 +59,7 @@ export default function Article() {
               <p className=" text-[#121212] font-normal text-base">{t('home')}</p>
             </Link>
             <img className="w-4 h-4" src="/vector.svg" alt="" />
-            <Link href="/blog">
+            <Link href="/articles">
               <p className=" text-[#121212] font-normal text-base arabic">{t('sigleArticle')}</p>
             </Link>
           </span>
