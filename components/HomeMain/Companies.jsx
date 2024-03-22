@@ -42,9 +42,7 @@ const BrandsSlider = ({}) => {
   return (
     <div
     
-    // data-aos="fade-top"
-    // data-aos-delay="200"
-    // data-aos-easing="ease-in-sine" data-aos-duration="300" 
+ 
     
     
     className="brands_slide w-full mt-24 mb-4 ">

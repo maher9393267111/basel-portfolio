@@ -16,9 +16,7 @@ const ItemCategories = ({ category}) => {
 
   return (
     <div
-    data-aos="fade-right"
-    data-aos-delay="200"
-    data-aos-easing="ease-in-sine" data-aos-duration="300"
+ 
     
     className=" mb-6 md:mb-12 mt-6 md:mt-12 px-10 arabic">
       <div className="relative py-8 mb-4">

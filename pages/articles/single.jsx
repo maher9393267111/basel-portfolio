@@ -60,9 +60,7 @@ export default function Article() {
       {product?.title && (
         <div
         
-        // data-aos="fade-right"
-        // data-aos-delay="200"
-        // data-aos-easing="ease-in-sine" data-aos-duration="300"
+     
 
         className="mt-12 w-full arabic md:mt-16 px-4 md:px-20 font-Jost text-[#121212]">
           <span className=" flex flex-row items- space-x-3 items-center">

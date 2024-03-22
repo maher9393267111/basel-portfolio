@@ -16,9 +16,7 @@ const MainHero = () => {
      
       <div
       
-      // data-aos="fade-right"
-      // data-aos-delay="300"
-      // data-aos-easing="ease-in-sine" data-aos-duration="600" 
+    
       
       
       className=" flex-1">
@@ -39,9 +37,7 @@ const MainHero = () => {
 
 
       <div
-          data-aos="fade-left"
-          data-aos-delay="300"
-          data-aos-easing="ease-in-sine" data-aos-duration="600" 
+         
       
       className=" img-container  flex justify-end md:w-[60%] lg:w-[50%]">
         <div className=" relative  justify-self-end">
