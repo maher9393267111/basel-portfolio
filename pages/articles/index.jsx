@@ -61,9 +61,7 @@ export default function Recipes() {
 {/* <Fade direction="right">  */}
 <div
  
-    data-aos="fade-right"
-    data-aos-delay="200"
-    data-aos-easing="ease-in-sine" data-aos-duration="300"
+
 
 className="min-h-[80vh] " dir={ locale === 'en' ? 'ltr' :'rtl'}>
     
