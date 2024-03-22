@@ -94,7 +94,7 @@ export default function ContactUs() {
         <div
           className="relative h-[300px] md:h-full w-full md:w-[30%] z-20 rounded-l-2xl"
           style={{
-            backgroundImage: `url("/me2.jpg")`,
+            backgroundImage: `url("/me3.jpg")`,
             backgroundSize: "cover",
             backgroundPosition: "center",
             backgroundRepeat: "no-repeat",

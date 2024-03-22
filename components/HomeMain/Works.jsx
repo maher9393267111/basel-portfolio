@@ -15,7 +15,7 @@ const ItemCategories = ({ category}) => {
 
 
   return (
-    <div className="mb-12 mt-24 px-10">
+    <div className="mb-12 mt-6 md:mt-12 px-10">
       <div className="relative py-8 mb-4">
       <div className="mb-2 md:mb-6 text-3xl md:text-4xl font-extrabold capitalize">
         <Fade direction="bottom">

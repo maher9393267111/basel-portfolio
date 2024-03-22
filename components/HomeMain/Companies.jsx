@@ -40,7 +40,7 @@ const BrandsSlider = ({}) => {
   //const brandsData =  cpBrandsData 
 
   return (
-    <div className="brands_slide w-full mt-24 mb-10 ">
+    <div className="brands_slide w-full mt-24 mb-4 ">
       <div className="mb-6 text-3xl md:text-4xl font-extrabold capitalize">
 
         <h1 className=" arabic shimmer  text-center">
