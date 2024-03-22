@@ -123,7 +123,9 @@ export const handleDelete = (col, item, isproduct = false, isUser = false) => {
 
     if (isproduct) {
       deleteImages(item.images);
-    } else {
+    }
+    
+    else {
       message.info(`${isUser} DATA`);
 
       message.info(` ${isUser ? item.avatarUrl : item?.image?.name} data`);

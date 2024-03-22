@@ -1,16 +1,36 @@
 import React from "react";
 import { useState } from "react";
-import { Table, Space, Button } from "antd";
+import { Table, Space, Button ,Message } from "antd";
 import Link from "next/link";
 import { AiFillDelete, AiFillEdit } from "react-icons/ai";
 import { FaVideo } from "react-icons/fa6";
 import { FaVideoSlash } from "react-icons/fa";
-import { handleDelete } from "@/functions/firebase/getData";
+import { handleDelete ,deleteImages } from "@/functions/firebase/getData";
+import { db } from "@/functions/firebase";
+import { deleteDoc ,doc } from "@firebase/firestore";
 import Image from "next/image";
 
 const ProductTable = ({ products }) => {
-  const [filteredInfo, setFilteredInfo] = useState({});
-  const [sortedInfo, setSortedInfo] = useState({});
+  
+   
+const [currentProducts , setCurrentProducts] = useState(products)
+
+
+  const deletePost = async (article) =>{ 
+    
+    await deleteDoc(doc(db, "articles",article?.id))
+    await  deleteImages(article?.images)
+    Message.success(' article deleted successfully')
+
+   let filtered = products?.filter((item)=>item.id !== article.id)
+  
+   setCurrentProducts(filtered)
+
+
+
+
+}
+
 
   const columns = [
     {
@@ -64,7 +84,8 @@ const ProductTable = ({ products }) => {
               <div>
                 <AiFillDelete
                   // send collection name and single category data to delete
-                  onClick={() => handleDelete("artcles", record, true)}
+                  onClick={() =>
+                    deletePost(record)}
                   className=" hover:text-red-700 text-red-500 cursor-pointer"
                   size={"25"}
                 />
@@ -96,7 +117,7 @@ const ProductTable = ({ products }) => {
       >
         
       </Space>
-      <Table  columns={columns} dataSource={products} />
+      <Table  columns={columns} dataSource={currentProducts} />
     </div>
   );
 };

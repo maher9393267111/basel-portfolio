@@ -48,7 +48,7 @@ const ItemCategories = ({ category}) => {
                 <Image
                   src={item.imgUrl}
                   width={352}
-                  height={240}
+                  height={740}
                   alt={item.title}
                   quality={100}
                   className="object-cover w-full h-full group-hover:transition"
