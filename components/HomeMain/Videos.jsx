@@ -42,9 +42,10 @@ const video ='https://www.tiktok.com/@basel.alkasab/video/7334373145417141510?is
       
       
       items-stretch gap-12">
-        {[1,2,3,4,5,6,7,8,9].map((item) => {
+        {[1,2,3,4,5,6,7,8,9].map((item ,index) => {
           return (
             <ServiceCard
+            key={index}
                         isSelected={true}
                         video={video}
                         image="/me2.jpg"

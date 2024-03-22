@@ -1,9 +1,10 @@
 import Image from "next/image";
 import ReactPlayer from 'react-player';
 import { TikTokEmbed } from "react-social-media-embed";
-const ServiceCard = ({ image, title, desc, isSelected ,video }) => {
+const ServiceCard = ({ image, title, desc, isSelected ,video  , key}) => {
   return (
     <div
+    key={key}
       className={`${
         isSelected ? "selected" : ""
       } card h-[500px]  cursor-pointer overflow-hidde rounded-xl bg-white transition-all duration-300  shadow-xl `}
