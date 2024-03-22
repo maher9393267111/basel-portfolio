@@ -29,7 +29,7 @@ const AdminLayout = ({ children }) => {
     console.log("profile Role: " + user);
 
     if (profile?.role && profile?.role !== "admin") {
-    //  replace("/");
+      replace("/");
       //toast.error("sorry you are not allowed to edit this page");
     }
 
@@ -37,7 +37,7 @@ const AdminLayout = ({ children }) => {
 
     console.log("isLogged-->", isLoggeed);
     if (!isLoggeed) {
-    // replace("/auth/login");
+     replace("/auth/login");
     }
   }, [profile]);
 
@@ -114,13 +114,14 @@ const AdminLayout = ({ children }) => {
             ))}
           </ul>
 
-          <div className=" py-2 px-4 cursor-pointer text-white">
+          <div className=" py-2   px-4 cursor-pointer text-white">
             <Button
+
               onClick={signOut}
               color={"white"}
               bg={"red.500"}
               _hover={{ bg: "red.600" }}
-              className=""
+              className="!bg-red-500"
             >
               LogOut
             </Button>

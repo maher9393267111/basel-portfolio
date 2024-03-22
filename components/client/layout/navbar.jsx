@@ -251,7 +251,7 @@ const Navbar = () => {
                     })}
                          
                          <div 
-                         className="inline-block rounded-lg px-3 py-2 text-left text-sm duration-100 hover:bg-blue-100 cursor-pointer"
+                         className="inline-block !bg-red-500 rounded-lg px-3 py-2 text-left text-sm duration-100 hover:bg-red-700 cursor-pointer"
                          onClick={logout}
                          >
                           

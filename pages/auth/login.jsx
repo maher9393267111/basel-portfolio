@@ -45,7 +45,7 @@ const {signInUser} = useAuth()
   const [showPassword, setShowPassword] = React.useState(false)
 
     return (
-        <div>
+        <div className='arabic'>
         <Flex 
         minH={"100vh"} 
         align={"center"} 
@@ -54,12 +54,12 @@ const {signInUser} = useAuth()
             <Stack mx={"auto"} maxW={"lg"} py={12} px={6} >
             {/* ----header--- */}
             <Stack align={"center"}>
-            <Heading fontSize={"4xl"} textAlign={"center"}>                
+            <Heading fontSize={"4xl"} mb={'12'} textAlign={"center"}>                
                 Sign in to your account
                 </Heading>
-                <Text fontSize={"lg"} color={"blue.400"}>
+                {/* <Text fontSize={"lg"} color={"blue.400"}>
                 to enjoy all of our cool features
-                </Text>
+                </Text> */}
                 </Stack>
 
                 {/* form text Zaher Zeinni to Mohammad */}
@@ -131,10 +131,10 @@ const {signInUser} = useAuth()
                 </FormControl>
 
 
-                <HStack justifyContent={"space-between"} py={4} >
+                {/* <HStack justifyContent={"space-between"} py={4} >
                     <Box >
                     <Link href={"/auth/register"}>
-                      {/* // inline block {span}  */}
+                    
                       
                         <Box color="blue.400" _hover={{ color: "blue.500" }}>
                         <span
@@ -156,9 +156,10 @@ const {signInUser} = useAuth()
                     <span>Forgot Password!</span>
                   </Link>
                 </Box>
-                </HStack>
+                </HStack> */}
                 
                 <Button
+                className='  !bg-blue-500'
                 type='submit'
                 _hover={{ bg: "blue.500" }}
                 bg={"blue.400"}
