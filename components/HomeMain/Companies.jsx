@@ -54,25 +54,70 @@ const BrandsSlider = ({}) => {
           {t("mecompanies")}
         </h1>
       </div>
+
+
+<div className="w-full gap-12 sm:px-20 mdPlus:px-0 max-w-[1400px] mx-auto grid 
+       grid-cols-[repeat(auto-fill,minmax(100%,1fr))] sm:grid-cols-[repeat(auto-fill,minmax(320px,1fr))]">
+
+
+
+      { brandsData.map((brand ,index) => {
+          return (
+            <SwiperSlide
+              key={index}
+              className="min-w-[140px] p-4 !min-h-[230px] mb-12 bg-white rounded-lg shadow-xl"
+            >
+              <div
+                className=" arabic  w-full h-full p-2 py-4 filter grayscale brightness-1/2 hover:filter-none transition duration-300"
+                
+              >
+
+
+<a href={brand?.link}  target="_blank">
+
+<p className="  !font-ib text-xl font-semibold text-primary text-center">{brand.title}</p>
+<p className=" !font-kuf my-2 text-center font-semibold text-primary">{brand.desc}</p>
+
+<div className="mt-12">
+<img
+                  src={brand?.imgUrl}
+                  alt={brand.title}
+                  fill
+                  className=" h-[100px] mx-auto w-[100px]  rounded-full "
+                />
+
+                
+
+</div>
+
+       
+
+</a>
+
+
+
+              </div>
+            </SwiperSlide>
+          );
+        })}
+
+</div>
+
+
+
+
+
       {/* <Fade direction="right"> */}
 
-     
+{/*      
       <Swiper
          breakpoints={breakpoints}
          spaceBetween={50}
          speed={5000}
-         loop={true}
-        // autoplay={{
-        //   delay: 0,
-        //   disableOnInteraction: false,
-        // }}
-        // modules={[Autoplay]}
+     
         pagination={{ clickable: true }}
-        autoplay={{
-       //   delay: 2500,
-        //  disableOnInteraction: false,
-        }}
-        modules={[Pagination, Autoplay]}
+    
+        modules={[Pagination]}
 
         className="w-full h-fit"
       >
@@ -115,7 +160,7 @@ const BrandsSlider = ({}) => {
             </SwiperSlide>
           );
         })}
-      </Swiper>
+      </Swiper> */}
       {/* </Fade> */}
     </div>
   );
