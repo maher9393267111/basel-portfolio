@@ -104,7 +104,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-white englishfont">
-      <div className="max-w-8xl mx-auto py-10 px-4 overflow-hidden sm:px-6 lg:px-8">
+      <div className="max-w-8xl mx-auto md:pt-10 pt-4  pb-10 px-4 overflow-hidden sm:px-6 lg:px-8">
         {/* <nav
           className="-mx-5 -my-2 flex flex-wrap justify-center"
           aria-label="Footer"
@@ -140,8 +140,10 @@ const Footer = () => {
         </div>
 
 
-        <p className="text-center  mt-6 text-gray-400 shimmer text-2xl font-semibold">
-           Baselkasaboglu
+        <p className="text-center  arabic  mt-6 text-gray-400 shimmer text-2xl font-semibold">
+           
+
+           {locale === 'en' ? ' baselkasaboglu'  : 'باسل قصاب اوغلو'}
           {/* Powered by{' '}
           <a
             className="hover:text-green-600 transition"

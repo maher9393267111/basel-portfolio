@@ -13,11 +13,13 @@ import { ChevronIcon } from "@/functions/icons";
 
 import { getDocuments, getDocument } from "@/functions/firebase/getData";
 import MainLayout from "@/components/layout";
+import { useAuth } from "@/functions/context";
 
 export default function Article() {
   const [product, setProduct] = useState({});
   console.log("🎭🎭🎭>", product.title);
-  const [loacding, setLoading] = useState(false);
+//  const [loacding, setLoading] = useState(false);
+  const {pageLoading, setPageLoading} = useAuth()
 
   const router = useRouter();
   const locale = router.locale;
@@ -27,12 +29,14 @@ export default function Article() {
 
   useEffect(() => {
     const getProduct = async () => {
-      setLoading(true);
+     // setLoading(true);
+     setPageLoading(true)
       //setProduct({});
       const data = await getDocument("articles", id);
       console.log(data, "fetch categories ====>>> 🎭🎭🎭>", data);
       setProduct(data);
-      setLoading(false);
+      setPageLoading(false)
+     // setLoading(false);
     };
 
     if (id) getProduct();
@@ -52,6 +56,7 @@ export default function Article() {
 
   return (
     <MainLayout>
+
       {product?.title && (
         <div className="mt-12 w-full arabic md:mt-16 px-4 md:px-20 font-Jost text-[#121212]">
           <span className=" flex flex-row items- space-x-3 items-center">
@@ -95,6 +100,7 @@ export default function Article() {
           </div>
         </div>
       )}
+
     </MainLayout>
   );
 }

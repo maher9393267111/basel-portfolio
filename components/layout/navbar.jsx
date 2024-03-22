@@ -67,7 +67,7 @@ export default function Navbar() {
                   <img className="w-18 logo object-cover h-14 mx-3" src="/assets/images/sweetimages/sweetsips-final-logo White.png" alt="" />
                   {/* <Icon icon={spaIcon} className=" logo text-4xl mr-2"/> */}
                   <span className="text-xl arabic shimmer">
-                    {locale === 'en' ? ' basel kasaboglu'  : 'باسل قصاب اوغلو'}
+                  {locale === 'en' ? ' basel kasaboglu'  : 'باسل قصاب اوغلو'}
                    
                     
                     

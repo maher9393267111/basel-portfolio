@@ -11,14 +11,16 @@ getDocumentsOrder,
 } from "@/functions/firebase/getData";
 import { orderBy, where } from "firebase/firestore";
 import Loader from "@/components/common/Loader";
+import { useAuth } from "@/functions/context";
 import Link from 'next/link'
 import { Zoom ,Fade } from "react-awesome-reveal";
 
   import { useRouter } from "next/router";
+
 export default function Recipes() {
 
 
-  
+  const {pageLoading, setPageLoading} = useAuth()
   
   
  
@@ -29,11 +31,12 @@ export default function Recipes() {
 
 
   const [products, setProducts] = useState([]);
-  const [loacding, setLoading] = useState(true);
+ // const [loacding, setLoading] = useState(true);
 
   useEffect(() => {
     const getArticles = async () => {
-      setLoading(true);
+     // setLoading(true);
+     setPageLoading(true)
       setProducts([]);
       const data = await getDocumentsOrder(
         "articles",
@@ -43,7 +46,8 @@ export default function Recipes() {
 
       console.log(data, "fetch products ====>>>>");
       setProducts(data);
-      setLoading(false);
+      setPageLoading(false)
+    //  setLoading(false);
     };
     getArticles();
   }, []);
@@ -52,7 +56,7 @@ export default function Recipes() {
   return (
     <MainLayout>
 
-{loacding ? <Loader/> :
+{/* {loacding ? <Loader/> : */}
 
 <Fade direction="right"> 
 <div className="min-h-[80vh] " dir={ locale === 'en' ? 'ltr' :'rtl'}>
@@ -101,7 +105,7 @@ export default function Recipes() {
 </Fade>
 
     
-    }
+    {/* } */}
 
 
 

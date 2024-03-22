@@ -52,30 +52,56 @@
   "myworks": [
     { 
       
-      "title":"Arabian Investors",
-      "imgUrl":"companies/1.jpg",
-      "desc":"A Turkish company accredited to grant citizenship to Caribbean countries and provide all legal advice for businessmen and investors to facilitate their travel to the best countries in the world.",
+      "title":"Investing in Golden",
+      "imgUrl":"/works/golden.jpg",
+      "desc":"Investing in gold through contracts with the best brands in the jewelry field In addition to granting the brand a franchise to any country in the world",
       "link":""
       
     },
     {
       
-      "title":"Darna",
-      "imgUrl":"companies/2.jpg",
-      "desc":"A leading Emirati company in real estate marketing with ten years of experience with a professional work team from the airport until receiving the property. We have a second branch in Istanbul implementing tourist cottage projects.",
+      "title":"Investing in Resturants",
+      "imgUrl":"/works/rest.jpg",
+      "desc":"Investing in the field of restaurants and cafes by contracting with the best and most successful Turkish brands and granting franchises to all Arab countries.",
       "link":"https://www.instagram.com/darna.real.estate?igsh=MXVucTk4emNkMnoxNA=="
      
+     },
+
+     {
+                      
+      "title":"Consultant in brand development",
+      "imgUrl": "/works/brand.jpg",
+      "desc":"Consultant in brand development. We have helped many emerging brand owners in several fields with their entry into the labor market and their success in distinctive marketing methods."
+     ,
+     "isvideo":true,
+     "video":"/works/brandvideo.mp4",
+     "link":"https://www.instagram.com/darna.real.estate?igsh=MXVucTk4emNkMnoxNA=="
+
+     },
+
+     {
+                      
+      "title":"tourist cottage",
+      "imgUrl": "/works/tourism.jpg",
+    "desc":"Implementing tourist cottage projects in many states of Turkey, and we own the management and operation of many cottages in Sapanca, Yalova Izmit and Fethiye.48 tourist huts were implemented during the year 2022"
+     ,
+     "link":"https://www.instagram.com/darna.real.estate?igsh=MXVucTk4emNkMnoxNA=="
+
      }
+     
      ,
      {
-       
-        "title":"Hiba Butik",
-        "imgUrl":"companies/3.jpg",
-       "desc":"An officially licensed American company, a leader in the retail sector for selling women's clothing through electronic stores. We offer a variety of dresses, sets and galabiyas designed with the latest fashion trends. We strive to meet the needs of modern women and enable them to express their elegance and personal confidence through distinctive, high-quality clothing."
-       ,
-       "link":"https://www.hbshoping.com"
-      
+                       
+       "title":"General trade and export to all Arab countries",
+       "imgUrl": "/works/ticaret.jpg",
+     "desc":"We have exported many Turkish products to Libya, Saudi Arabia, Kuwait, Iraq and Palestine The most important of them is the export of furniture, women's and children's clothing, in addition to medical and cosmetic cosmetics"
+    ,
+      "link":"https://www.instagram.com/darna.real.estate?igsh=MXVucTk4emNkMnoxNA=="
+ 
       }
+      
+     
+   
     
    
       
