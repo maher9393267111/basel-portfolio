@@ -16,9 +16,9 @@ const MainHero = () => {
      
       <div
       
-      data-aos="fade-right"
-      data-aos-delay="300"
-      data-aos-easing="ease-in-sine" data-aos-duration="600" 
+      // data-aos="fade-right"
+      // data-aos-delay="300"
+      // data-aos-easing="ease-in-sine" data-aos-duration="600" 
       
       
       className=" flex-1">
