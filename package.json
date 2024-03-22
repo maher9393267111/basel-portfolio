@@ -21,6 +21,7 @@
     "@heroicons/react": "^2.1.1",
     "@reduxjs/toolkit": "^2.0.1",
     "antd": "^5.10.1",
+    "aos": "^2.3.4",
     "classnames": "^2.4.0",
     "dayjs": "^1.11.10",
     "firebase": "^10.4.0",

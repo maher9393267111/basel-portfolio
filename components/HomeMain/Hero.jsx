@@ -14,7 +14,14 @@ const MainHero = () => {
  
 
      
-      <div className=" flex-1">
+      <div
+      
+      data-aos="fade-right"
+      data-aos-delay="300"
+      data-aos-easing="ease-in-sine" data-aos-duration="600" 
+      
+      
+      className=" flex-1">
       {/* <Fade direction="right"> */}
         <h1 className="arabic text-primary relative text-2xl md:text-3xl  font-bold  font-kuf font-normal  mb-4 mt-3  md:max-w-[30ch] ">
     {t("me")}
@@ -31,7 +38,12 @@ const MainHero = () => {
 
 
 
-      <div className=" img-container  flex justify-end md:w-[60%] lg:w-[50%]">
+      <div
+          data-aos="fade-left"
+          data-aos-delay="300"
+          data-aos-easing="ease-in-sine" data-aos-duration="600" 
+      
+      className=" img-container  flex justify-end md:w-[60%] lg:w-[50%]">
         <div className=" relative  justify-self-end">
         
           <div className="   absolute -z-10 -translate-x-1/2 -translate-y-1/2	">
