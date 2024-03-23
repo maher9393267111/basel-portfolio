@@ -11,6 +11,10 @@ import Companies from '@/components/HomeMain/Companies'
 import Works from '@/components/HomeMain/Works'
 import ContactUs from "@/components/HomeMain/contactMain";
 import Vides from '@/components/HomeMain/Videos'
+import ReactPlayer from 'react-player';
+import Test from '@/components/HomeMain/test'
+
+
 
 export default function Index({}) {
   const { t } = useTranslation("common");
@@ -28,7 +32,8 @@ export default function Index({}) {
         <Companies/>
         <Works/>
         <ContactUs/>
-        {/* <Vides/> */}
+        {/* <Test/> */}
+    
       </div>
       
     </Layout>

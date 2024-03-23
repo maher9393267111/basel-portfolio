@@ -37,7 +37,7 @@ const video ='https://www.tiktok.com/@basel.alkasab/video/7334373145417141510?is
       {/* <Fade direction="right"> */}
 
      
-      <div className="w-full sm:px-20 mdPlus:px-0 max-w-[1400px] mx-auto grid 
+      {/* <div className="w-full sm:px-20 mdPlus:px-0 max-w-[1400px] mx-auto grid 
        grid-cols-[repeat(auto-fill,minmax(100%,1fr))] sm:grid-cols-[repeat(auto-fill,minmax(320px,1fr))]
       
       
@@ -54,7 +54,7 @@ const video ='https://www.tiktok.com/@basel.alkasab/video/7334373145417141510?is
                       />
           );
         })}
-      </div>
+      </div> */}
       {/* </Fade> */}
     </div>
   );
